@@ -13,16 +13,13 @@ A private Android browser with session isolation, desktop mode, and URL bar sugg
 
 ## Download
 
-| Build | File |
-|-------|------|
-| Release | [MultiSessionBrowser-release.apk](MultiSessionBrowser-release.apk) |
-| Debug | [MultiSessionBrowser-debug.apk](MultiSessionBrowser-debug.apk) |
+**[Download Latest APK](https://github.com/Qmgamerzyt/MultiSessionBrowser-Release/releases)**
 
 **Requirements:** Android 9+ (API 28)
 
 ## Install
 
-1. Download the APK from above
+1. Download the APK from the releases page above
 2. Enable "Install from unknown sources" on your device
 3. Open the APK and install
 
