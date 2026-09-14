@@ -27,10 +27,9 @@ MultiSession Browser is an Android web browser that creates fully isolated brows
 ## How to Install
 
 1. Download the APK from the [releases page](https://github.com/Qmgamerzyt/MultiSessionBrowser-Release/releases)
-2. On your Android device, go to **Settings > Security** and enable **Install from unknown sources**
-3. Open the downloaded APK file
-4. Tap **Install** and wait for the installation to complete
-5. Open MultiSession Browser from your app drawer
+2. Open the downloaded APK file
+3. Tap **Install** and wait for the installation to complete
+4. Open MultiSession Browser from your app drawer
 
 ## Why Use MultiSession Browser?
 
