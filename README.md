@@ -12,11 +12,19 @@ MultiSession Browser is an Android web browser that creates fully isolated brows
 - **Desktop Mode** — Toggle desktop user-agent with automatic viewport scaling and MutationObserver-based viewport injection for full desktop site rendering.
 - **Smart URL Bar Suggestions** — Real-time suggestions as you type, including search predictions, browsing history, and bookmarks. Powered by Google search.
 - **Multi-Tab Browsing** — Open and manage multiple tabs within each session. Tab counter and quick-switch interface for efficient navigation.
-- **Built-in Download Manager** — Download files directly in the browser with progress tracking and background download support.
+- **Tab Groups** — Organize tabs into named groups within sessions. Persistent groups survive browser restarts.
+- **Tab Reordering** — Drag-to-reorder tabs within a session.
+- **Session Reordering** — Drag-to-reorder sessions in the sessions drawer.
+- **Default Session** — Pin a default session that loads on startup.
+- **Built-in Download Manager** — App-owned download manager with progress tracking, pause/resume, file-type icons, and a dedicated downloads page.
+- **Persistent Site Permissions** — Geolocation, camera, microphone, and notification permissions saved per-site across sessions.
+- **Camera/Microphone Permission Revocation** — Revoke previously granted media permissions per-site.
+- **GeckoView Engine** — Powered by Mozilla GeckoView for desktop-class rendering and WebExtension support foundation.
 - **Dark & Light Themes** — System-adaptive, light, and dark themes for comfortable browsing in any lighting condition.
 - **Privacy Controls** — Enable or disable JavaScript, third-party cookies, safe browsing, and zoom on a per-session basis.
 - **Custom User Agent** — Set a default user-agent mode or define your own custom user-agent string.
 - **Session Management** — Create, rename, and delete sessions. Clear cookies, storage, cache, or history per session.
+- **Compact Browser UI** — Space-efficient interface with pull-out sessions drawer.
 
 ## Download
 
@@ -43,16 +51,45 @@ MultiSession Browser is an Android web browser that creates fully isolated brows
 | Permission | Purpose |
 |-----------|---------|
 | `INTERNET` | Browse the web and load online content |
-| `WRITE_EXTERNAL_STORAGE` | Save downloaded files (Android 9-9) |
 | `FOREGROUND_SERVICE` | Keep downloads running in the background |
+| `CAMERA` | Camera access for websites (permission prompt) |
+| `RECORD_AUDIO` | Microphone access for websites (permission prompt) |
 
 ## Technology
 
 - Built with native Android (Kotlin)
-- Uses Android WebView for rendering
-- Room database for history and bookmarks
+- GeckoView (Mozilla Firefox engine) for rendering
+- Room database for history, bookmarks, and permissions
 - Coroutines for async operations
 - Material Design 3 UI components
+- ABI-specific builds (arm64-v8a, armeabi-v7a)
+
+## Changelog
+
+### v2.0.2
+- Mobile WebRTC audio improvements
+- Camera/microphone permission revocation
+- Persistent site permissions (geolocation, camera, microphone, notifications)
+- Tab reordering via drag
+- Tab groups with persistent empty groups
+- Session reordering via drag
+- Default-session handling (pin a startup session)
+- Compact browser UI
+- App-owned download manager with dedicated page
+- Download controls and file-type handling
+- JavaScript URL / bookmarklet support
+- GeckoView WebExtension support foundation
+- Room v4 database changes
+- Various bug fixes and improvements
+
+### v2.0.1
+- Fixed GeckoView 155 permission constants
+- Simplified permission prompt handling
+
+### v2.0.0
+- Migrated from Android WebView to GeckoView 155
+- Per-session GeckoView context isolation
+- ABI-specific APK builds (arm64-v8a, armeabi-v7a)
 
 ## Copyright
 
